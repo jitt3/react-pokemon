@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+
+  &__container {
+    max-width: 1048px;
+    margin: 0 auto;
+    height: 100%;
+    box-shadow: 1px 1px 10px #ccc;
+  }
+}

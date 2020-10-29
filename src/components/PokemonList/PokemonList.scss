@@ -1,0 +1,54 @@
+.pokemon-list-container {
+  width: 100%;
+  max-height: calc(100vh - 300px);
+  padding-top: 2rem;
+  table {
+     width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+      cursor: pointer;
+      display: table;
+      width: 100%;
+      border-bottom: 0.0625rem solid #eee;
+      table-layout: fixed;
+    }
+
+      tbody {
+        display: block;
+        position: relative;
+        height: calc(100vh - 350px);
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          width: 1px;
+          background: rgba(0,0,0,0);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba(0,0,0,.25);
+          -webkit-border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-corner {
+          background: rgba(0,0,0,0);
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0);
+        }
+
+      }
+
+      tbody {
+        tr > td {
+          padding: 1rem 0;
+          text-transform: capitalize;
+        }
+
+        tr:hover {
+          background: #eee;
+        }
+      }
+   }
+}
