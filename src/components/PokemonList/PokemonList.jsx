@@ -3,12 +3,14 @@ import {useQuery} from "react-query";
 import {Link} from 'react-router-dom';
 import {getPokemonList} from "../../queries/getPokemonList";
 import './PokemonList.scss';
+import Loading from "../Loading";
 const blockName = 'pokemon-list-container';
 const PokemonList = () => {
 
     const {isFetching, isLoading, data, isError} = useQuery('pokemonList',getPokemonList);
+
     if(isLoading || isFetching) {
-        return <div>Loading List</div>
+        return <Loading  message={'Loading List...'}/>
     }
     if(isError) {
         return <div>Error getting data...</div>

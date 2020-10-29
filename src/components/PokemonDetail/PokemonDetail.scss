@@ -21,6 +21,10 @@
       height: 150px;
     }
 
+    > svg {
+      position: absolute;
+    }
+
     > span {
       margin-top: 2rem;
       font-weight: 700;

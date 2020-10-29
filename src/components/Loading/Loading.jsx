@@ -1,9 +1,14 @@
 import React from 'react';
+import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSpinner} from "@fortawesome/free-solid-svg-icons/faSpinner";
+import './Loading.scss';
 
-const Loading = () => {
+const blockName = 'loading-container';
+const Loading = ({message}) => {
     return (
-        <div>
-
+        <div className={blockName}>
+            <FontAwesomeIcon icon={faSpinner} spin />
+              {message}
         </div>
     );
 };
