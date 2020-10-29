@@ -27,18 +27,14 @@ const PokemonList = () => {
                 </thead>
                 <tbody>
                 {
-                    data.results.map(({name, url}) => {
-                        const splitUrl = url.split('/');
-                        const id = splitUrl[splitUrl.length - 2];
-                        return (
-                            <tr key={id}>
+                    data.results.map(({name}) => (
+                            <tr key={name}>
                                 <td>{name}</td>
                                 <td>
                                     <Link to={`/pokemon/${name}`}>View detail</Link>
                                 </td>
                             </tr>
-                        )
-                    })
+                        ))
                 }
                 </tbody>
             </table>
