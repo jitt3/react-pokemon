@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import {useQuery} from "react-query";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -9,9 +9,9 @@ import './PokemonDetail.scss';
 const blockName = 'pokemon-detail-container';
 
 const PokemonDetail = () => {
-    const { id } = useParams();
-    const [loadingImage, setLoadingImage] = React.useState(true);
-    const {isFetching, isLoading, data, isError} = useQuery(['pokemonDetail', id], getPokemonDetail)
+    const { pokemonName } = useParams();
+    const [loadingImage, setLoadingImage] = useState(true);
+    const {isFetching, isLoading, data, isError} = useQuery(['pokemonDetail', pokemonName], getPokemonDetail)
     if(isLoading || isFetching) {
         return <Loading message={'Loading pokemon data...'} />
     }
@@ -33,7 +33,7 @@ const PokemonDetail = () => {
                 {
                     loadingImage ? (<FontAwesomeIcon icon={faSpinner} spin />) : null
                 }
-                <img onLoad={()=>{setLoadingImage(false)}} src={`${front_default}`}/>
+                <img onLoad={()=>{setLoadingImage(false)}} src={`${front_default}`} alt={'pokemon'}/>
                 <span>{name}</span>
                 <div className={`${blockName}__weight-height`}>
                     <span>Weight: {weight}</span>

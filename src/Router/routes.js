@@ -13,7 +13,7 @@ const appRoutes = {
     POKEMON_DETAIL: {
         exact: false,
         name:'pokemonDetail',
-        path: '/pokemon/:id',
+        path: '/pokemon/:pokemonName',
         component: PokemonDetail,
     }
 }

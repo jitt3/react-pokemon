@@ -1,6 +1,7 @@
 .pokemon-list-container {
   width: 100%;
   max-height: calc(100vh - 300px);
+  height: calc(100vh - 300px);
   padding-top: 2rem;
   table {
      width: 100%;
@@ -51,4 +52,26 @@
         }
       }
    }
+
+  &__footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+
+    :first-child {
+      margin-right: 1rem;
+    }
+    button {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 1rem 1.5rem;
+      border: none;
+      background-color: #0168a0;
+      color: #fff;
+
+      &:disabled {
+        background-color: rgba(1,104,160,.5);
+      }
+    }
+  }
 }
