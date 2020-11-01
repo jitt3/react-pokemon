@@ -2,11 +2,31 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 1.5em;
 
-  & svg {
-    margin-right: 1rem;
+  & span {
+    margin-bottom: 1rem;
+  }
+
+
+  @keyframes loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  &__spinner {
+    display: inline-block;
+    border: 4px solid rgba(0,0,0,.1);
+    border-left-color: #7983ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: loader-spin 1.2s linear infinite;
   }
 }

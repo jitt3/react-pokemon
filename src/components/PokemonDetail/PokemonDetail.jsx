@@ -1,8 +1,6 @@
 import {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import {useQuery} from "react-query";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSpinner} from "@fortawesome/free-solid-svg-icons/faSpinner";
 import {getPokemonDetail} from "../../queries/getPokemonDetail";
 import Loading from "../Loading";
 import './PokemonDetail.scss';
@@ -31,7 +29,7 @@ const PokemonDetail = () => {
         <div className={blockName}>
             <div className={`${blockName}__main-info`}>
                 {
-                    loadingImage ? (<FontAwesomeIcon icon={faSpinner} spin />) : null
+                    loadingImage ? (<Loading message={''}/>) : null
                 }
                 <img onLoad={()=>{setLoadingImage(false)}} src={`${front_default}`} alt={'pokemon'}/>
                 <span>{name}</span>
