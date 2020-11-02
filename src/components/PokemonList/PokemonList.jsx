@@ -36,7 +36,7 @@ const PokemonList = () => {
         return () => {
             isCurrent = false;
         }
-    },[resolvedData])
+    },[dispatch, resolvedData])
 
     if(isError) {
         return <div>Error getting data...</div>
@@ -44,7 +44,7 @@ const PokemonList = () => {
     return (
             <div className={blockName}>
                 <h1>Pokemon List</h1>
-                {(isLoading || isFetching) ? (<Loading  message={'Loading List...'}/>) :
+                {(isLoading || isFetching) ? (<Loading  message={'Loading List'}/>) :
                     (
                         <table>
                             <thead>

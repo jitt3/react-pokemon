@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
        <div className='App__container'>
-           <React.Suspense fallback={<Loading message={'Loading pokedex...'}/>}>
+           <React.Suspense fallback={<Loading message={'Loading pokedex'}/>}>
                <ReactQueryCacheProvider queryCache={queryCache}>
                    <PokemonPagerProvider>
                        <Router />
