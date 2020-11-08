@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import pokemonReducer from '../features/pokemonSlice';
+import {combineReducers} from 'redux';
+import pokemonPagerReducer from '../features/pokemonPagerSlice';
 export default combineReducers({
-    pokemon: pokemonReducer,
+  pokemonPager: pokemonPagerReducer,
 });
