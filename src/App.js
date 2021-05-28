@@ -18,7 +18,7 @@ function App() {
     <div className="App" data-testid="app">
       <div className="App__container">
         <ReduxProvider>
-          <React.Suspense fallback={<Loading message={'Loading pokedex...'} />}>
+          <React.Suspense fallback={<Loading message={'Loading Pokedex...'} />}>
             <ReactQueryCacheProvider queryCache={queryCache}>
               <Router />
             </ReactQueryCacheProvider>
