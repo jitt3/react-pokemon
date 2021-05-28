@@ -15,7 +15,7 @@ const queryCache = new QueryCache({
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <div className="App__container">
         <ReduxProvider>
           <React.Suspense fallback={<Loading message={'Loading pokedex...'} />}>
